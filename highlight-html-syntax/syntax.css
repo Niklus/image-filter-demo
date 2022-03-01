@@ -1,13 +1,14 @@
 /* Code Styles */
 
 .method {
-    color: #00A2CD;
+  color: navy;
+  font-weight: bold;
 }
 
 .global {
-    color: #db9114;
+  color: #ff6a07;
 }
 
 .string {
-    color: #02C1A7;
+  color: #053630;
 }
