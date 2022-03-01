@@ -29,7 +29,15 @@
         margin-bottom: -1.5px;
         font-style: italic;
       }
+
+      code {
+        display: block;
+        font-size: 15px;
+      }
     </style>
+
+    <link rel="stylesheet" href="highlight-html-syntax/syntax.css" />
+    <script src="./highlight-html-syntax/index.js"></script>
   </head>
   <body>
     <h1>image-filter demo</h1>
@@ -43,9 +51,14 @@
       filter="sepia"
     ></image-filter>
 
-    <xmp>
-      <image-filter src="beach-time.jpg" alt="Children at the beach" width="500" filter="sepia"></image-filter>
-    </xmp>
+    <code>
+      <image-filter
+        src="beach-time.jpg"
+        alt="Children at the beach"
+        width="500"
+        filter="sepia"
+      ></image-filter>
+    </code>
 
     <hr />
 
@@ -58,9 +71,14 @@
       filter="invert"
     ></image-filter>
 
-    <xmp>
-      <image-filter src="beach-time.jpg" alt="Children at the beach" width="500" filter="invert"></image-filter>
-    </xmp>
+    <code>
+      <image-filter
+        src="beach-time.jpg"
+        alt="Children at the beach"
+        width="500"
+        filter="invert"
+      ></image-filter>
+    </code>
 
     <hr />
 
@@ -73,9 +91,14 @@
       filter="grayscale"
     ></image-filter>
 
-    <xmp>
-      <image-filter src="beach-time.jpg" alt="Children at the beach" width="500" filter="grayscale"></image-filter>
-    </xmp>
+    <code>
+      <image-filter
+        src="beach-time.jpg"
+        alt="Children at the beach"
+        width="500"
+        filter="grayscale"
+      ></image-filter>
+    </code>
 
     <hr />
 
@@ -88,9 +111,14 @@
       filter="blur"
     ></image-filter>
 
-    <xmp>
-      <image-filter src="beach-time.jpg" alt="Children at the beach" width="500" filter="blur"></image-filter>
-    </xmp>
+    <code>
+      <image-filter
+        src="beach-time.jpg"
+        alt="Children at the beach"
+        width="500"
+        filter="blur"
+      ></image-filter>
+    </code>
 
     <hr />
 
@@ -103,9 +131,14 @@
       filter="contrast"
     ></image-filter>
 
-    <xmp>
-      <image-filter src="beach-time.jpg" alt="Children at the beach" width="500" filter="contrast"></image-filter>
-    </xmp>
+    <code>
+      <image-filter
+        src="beach-time.jpg"
+        alt="Children at the beach"
+        width="500"
+        filter="contrast"
+      ></image-filter>
+    </code>
 
     <hr />
 
@@ -118,9 +151,14 @@
       filter="saturate"
     ></image-filter>
 
-    <xmp>
-      <image-filter src="beach-time.jpg" alt="Children at the beach" width="500" filter="saturate"></image-filter>
-    </xmp>
+    <code>
+      <image-filter
+        src="beach-time.jpg"
+        alt="Children at the beach"
+        width="500"
+        filter="saturate"
+      ></image-filter>
+    </code>
 
     <hr />
 
@@ -133,9 +171,14 @@
       filter="huerotate"
     ></image-filter>
 
-    <xmp>
-      <image-filter src="beach-time.jpg" alt="Children at the beach" width="500" filter="huerotate"></image-filter>
-    </xmp>
+    <code>
+      <image-filter
+        src="beach-time.jpg"
+        alt="Children at the beach"
+        width="500"
+        filter="huerotate"
+      ></image-filter>
+    </code>
 
     <hr />
 
@@ -148,9 +191,14 @@
       filter="shadow"
     ></image-filter>
 
-    <xmp>
-      <image-filter src="beach-time.jpg" alt="Children at the beach" width="500" filter="shadow"></image-filter>
-    </xmp>
+    <code>
+      <image-filter
+        src="beach-time.jpg"
+        alt="Children at the beach"
+        width="500"
+        filter="shadow"
+      ></image-filter>
+    </code>
 
     <hr />
 
@@ -163,8 +211,21 @@
       filter="opacity"
     ></image-filter>
 
-    <xmp>
-      <image-filter src="beach-time.jpg" alt="Children at the beach" width="500" filter="opacity"></image-filter>
-    </xmp>
+    <code>
+      <image-filter
+        src="beach-time.jpg"
+        alt="Children at the beach"
+        width="500"
+        filter="opacity"
+      ></image-filter>
+    </code>
+
+    <script>
+      const codes = document.querySelectorAll("code");
+      codes.forEach((code) => {
+        const syntax = Highlight(code.innerHTML);
+        code.innerHTML = syntax;
+      });
+    </script>
   </body>
 </html>
